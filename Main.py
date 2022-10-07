@@ -29,6 +29,10 @@ class Solution:
           True if it is empty, else returns False.
         """
         # Write your code here
+        if self.top==(-1):
+            return True
+        else:
+            return False
 
     def is_queue_empty(self):
         """
@@ -37,6 +41,10 @@ class Solution:
           True if it is empty, else returns False.
         """
         # Write your code here
+        if self.rear == -1:
+            return True
+        else:
+            return False
 
     def is_stack_full(self):
         """
@@ -45,6 +53,10 @@ class Solution:
           True if it is full, else returns False.
         """
         # Write your code here
+        if self.top == (self.size-1):
+            return True
+        else:
+            return False
 
     def is_queue_full(self):
         """
@@ -53,6 +65,10 @@ class Solution:
           True if it is full, else returns False.
         """
         # Write your code here
+        if self.rear==(self.size=1):
+            return True
+        else:
+            return False
 
     def push_character(self, character):
         """
@@ -61,6 +77,9 @@ class Solution:
             character: A character that will be pushed to the stack.
         """
         # Write your code here
+        if not is_stack_full():
+            self.stack.append(character)
+            self.top+=1
 
     def enqueue_character(self, character):
         """
@@ -69,6 +88,9 @@ class Solution:
             character: A character that will be enqueued to queue.
         """
         # Write your code here
+        if not is_queue_full():
+            self.queue.append(character)
+            self.rear+=1
 
     def pop_character(self):
         """
@@ -77,6 +99,9 @@ class Solution:
           The data that is popped out if the stack is not empty.
         """
         # Write your code here
+        if not is_stack_empty():
+            self.stack.pop()
+            self.top-=1
 
     def dequeue_character(self):
         """
@@ -85,7 +110,9 @@ class Solution:
           The data that is dequeued if the queue is not empty.
         """
         # Write your code here
-
+        if not is_queue_empty():
+            self.queue.pop()
+            self.rear-=1
 
 # read the string text
 text = input()
