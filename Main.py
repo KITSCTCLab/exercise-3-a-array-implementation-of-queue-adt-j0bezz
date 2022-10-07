@@ -65,7 +65,7 @@ class Solution:
           True if it is full, else returns False.
         """
         # Write your code here
-        if self.rear==(self.size=1):
+        if self.rear==(self.size-1):
             return True
         else:
             return False
